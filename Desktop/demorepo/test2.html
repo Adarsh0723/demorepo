@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Array Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button {
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>ADARSH SHARAN</h2>
+    <H2>ROLL NO:22054117</H2>
+    
+    <label for="numberInput">Enter a number:</label>
+    <input type="number" id="numberInput">
+    <button onclick="addToArray()">Add to Array</button>
+    
+    <h3>Array:</h3>
+    <p id="arrayDisplay">[]</p>
+    
+    <label for="searchInput">Search for a number:</label>
+    <input type="number" id="searchInput">
+    <button onclick="searchElement()">Search</button>
+    <p id="searchResult"></p>
+    
+    <button onclick="sortArray(true)">Sort Ascending</button>
+    <button onclick="sortArray(false)">Sort Descending</button>
+    
+    <h3>Sorted Arrays:</h3>
+    <p><strong>Ascending:</strong> <span id="ascendingArray"></span></p>
+    <p><strong>Descending:</strong> <span id="descendingArray"></span></p>
+    
+    <script>
+        let array = [];
+
+        function addToArray() {
+            let input = document.getElementById("numberInput").value;
+            if (input !== "") {
+                array.push(Number(input));
+                document.getElementById("numberInput").value = "";
+                displayArray();
+            }
+        }
+
+        function displayArray() {
+            document.getElementById("arrayDisplay").textContent = JSON.stringify(array);
+        }
+
+        function searchElement() {
+            let searchValue = Number(document.getElementById("searchInput").value);
+            let index = array.indexOf(searchValue);
+            let resultText = index !== -1 ? `Element found at index: ${index}` : "Element not found";
+            document.getElementById("searchResult").textContent = resultText;
+        }
+
+        function sortArray(ascending) {
+            let sortedArray = [...array].sort((a, b) => ascending ? a - b : b - a);
+            if (ascending) {
+                document.getElementById("ascendingArray").textContent = JSON.stringify(sortedArray);
+            } else {
+                document.getElementById("descendingArray").textContent = JSON.stringify(sortedArray);
+            }
+        }
+    </script>
+</body>
+</html>

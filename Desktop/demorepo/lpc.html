@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Exam Portal</title>
+    
+    <!-- Internal CSS (Document-wide style) -->
+    <style>
+        /* Element Selector: Targets all <p> elements */
+        p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Id Selector: Targets elements with a specific id */
+        #header {
+            background-color: #0066cc;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #header-title {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        #footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Class Selector: Targets elements with a specific class */
+        .service-links {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .service-links li {
+            margin: 10px 0;
+        }
+
+        .service-links a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        /* More Element Selector: Targets all <h2> elements */
+        h2 {
+            color: #0066cc;
+            font-size: 1.8em;
+        }
+
+        /* Id Selector for form buttons */
+        #login-button, #register-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        #login-button:hover, #register-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <!-- Inline CSS Example -->
+    <header id="header">
+        <h1 id="header-title">Welcome to e-Exam Portal</h1>
+    </header>
+
+    <main>
+        <div id="intro-section">
+            <img src="download.png" alt="e-Exam Portal Image" width="300" id="portal-image">
+            <p id="intro-text">The e-Exam Portal is your one-stop solution for online exams, interactive forums, digital repositories, and personalized walls. Enhance your learning experience with our state-of-the-art features designed for seamless academic engagement.</p>
+        </div>
+        <div id="services-section">
+            <h2 id="services-title">Our Services</h2>
+            <ul class="service-links" id="services-list">
+                <li><a href="p4.html" id="exam-link" name="exam-link">e-Exam</a></li>
+                <li><a href="openforum.html" id="forum-link" name="forum-link">Openforum</a></li>
+                <li><a href="repo.html" id="repository-link" name="repository-link">e-Repository</a></li>
+                <li><a href="mywall.html" id="mywall-link" name="mywall-link">MyWall</a></li>
+            </ul>
+        </div>
+        <div id="search-section">
+            <label for="search" id="search-label" name="search-label">Search:</label>
+            <input type="text" id="search" name="search" placeholder="Search here..." />
+        </div>
+      
+    </main>
+
+    
+</body>
+</html>

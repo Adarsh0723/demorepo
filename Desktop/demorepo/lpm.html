@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Exam Portal</title>
+    
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .service-links {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .service-links li {
+            margin: 10px 0;
+        }
+
+        .service-links a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        #footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #footer ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #footer ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        #footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <!-- Inline CSS Example -->
+    <header style="background-color: #0066cc; padding: 20px;">
+        <h1 style="font-size: 2.5em;">Welcome to e-Exam Portal</h1>
+    </header>
+
+    <main>
+        <div id="intro-section">
+            <img src="download.png" alt="e-Exam Portal Image" width="300" id="portal-image">
+            <p id="intro-text">The e-Exam Portal is your one-stop solution for online exams, interactive forums, digital repositories, and personalized walls. Enhance your learning experience with our state-of-the-art features designed for seamless academic engagement.</p>
+        </div>
+        <div id="services-section">
+            <h2 id="services-title">Our Services</h2>
+            <ul class="service-links" id="services-list">
+                <li><a href="p4.html" id="exam-link" name="exam-link">e-Exam</a></li>
+                <li><a href="openforum.html" id="forum-link" name="forum-link">Openforum</a></li>
+                <li><a href="e-repository.html" id="repository-link" name="repository-link">e-Repository</a></li>
+                <li><a href="mywall.html" id="mywall-link" name="mywall-link">MyWall</a></li>
+            </ul>
+        </div>
+        <div id="search-section">
+            <label for="search" id="search-label" name="search-label">Search:</label>
+            <input type="text" id="search" name="search" placeholder="Search here..." />
+        </div>
+        <div id="login-register-section">
+           
+                <button type="button" id="login-button" name="login-button">Login</button>
+                <button type="submit" id="register-button" name="register-button">Register</button>
+                <p id="register-text" name="register-text" style="text-align: center; margin-top: 10px;">
+                    <a href="p3.html" id="register-link" name="register-link" style="color: #007BFF;">Register here</a>
+                </p>
+                <div id="login-section" name="login-section">
+                    <h2 id="login-title" name="login-title">Login / Register</h2>
+                    <form id="login-form" name="login-form">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username"><br><br>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password"><br><br>
+                        <input type="submit" id="login-btn" name="login-btn" value="Login">
+                    </form>
+                    <p id="register-text" name="register-text" style="text-align: center; margin-top: 10px;">
+                        Don't have an account? 
+                        <a href="register.html" id="register-link" name="register-link" style="color: #007BFF;">Register here</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    
+    </main>
+
+    <div id="footer" name="footer">
+        <footer id="footer-section" name="footer-section">
+            <p id="footer-text" name="footer-text">e-Exam Portal © 2024. All Rights Reserved.</p>
+            <ul id="footer-links" name="footer-links">
+                <li><a href="#" id="about-link" name="about-link">About Us</a></li>
+                <li><a href="#" id="contact-link" name="contact-link">Contact</a></li>
+                <li><a href="#" id="privacy-link" name="privacy-link">Privacy Policy</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>

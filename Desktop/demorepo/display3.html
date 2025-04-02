@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Operations App</title>
+</head>
+<body>
+
+    <center>
+    <div>
+        <h1>Array Operations App</h1>
+        <input type="text" id="arrayInput" placeholder="Enter a value" />
+        <br>
+        <br>
+        <button onclick="addToArray()">Push(Add to End)</button>
+        <br>
+        <br>
+        <button onclick="removeFromArray()">Pop(Remove from End)</button>
+        <br>
+        <br>
+        <button onclick="shiftArray()">Shift(Remove from Start)</button>
+        <br>
+        <br>
+        <button onclick="unshiftArray()">Unshift(Add to Start)</button>
+        <p id="arrayDisplay"></p>
+    </div>
+    <script>
+        const array = [];
+
+        function updateDisplay() {
+            document.getElementById('arrayDisplay').textContent = `Array: [${array.join(', ')}]`;
+        }
+
+        function addToArray() {
+            const value = document.getElementById('arrayInput').value;
+            if (value) {
+                array.push(value);
+                updateDisplay();
+                document.getElementById('arrayInput').value = '';
+            } else {
+                alert('Please enter a value.');
+            }
+        }
+
+        function removeFromArray() {
+            if (array.length > 0) {
+                array.pop();
+                updateDisplay();
+            } else {
+                alert('Array is already empty.');
+            }
+        }
+
+        function shiftArray() {
+            if (array.length > 0) {
+                array.shift();
+                updateDisplay();
+            } else {
+                alert('Array is already empty.');
+            }
+        }
+
+        function unshiftArray() {
+            const value = document.getElementById('arrayInput').value;
+            if (value) {
+                array.unshift(value);
+                updateDisplay();
+                document.getElementById('arrayInput').value = '';
+            } else {
+                alert('Please enter a value.');
+            }
+        }
+    </script>
+    </center>
+</body>
+</html>
